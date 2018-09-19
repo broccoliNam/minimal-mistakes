@@ -280,7 +280,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: wide
+      layout: archive
       author_profile: true
       read_time: false
       comments: # true
