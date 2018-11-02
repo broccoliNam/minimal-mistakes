@@ -7,4 +7,11 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-paginate"
   gem "jekyll-algolia"
+
+  # Generate the site
+  sh "bundle exec jekyll build"
+
+  # Run Algolia 
+  sh "bundle exec jekyll algolia"
+  
 end
