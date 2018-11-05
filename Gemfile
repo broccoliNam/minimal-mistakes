@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gemspec
+gem 'github-pages'
 
 group :jekyll_plugins do
   gem "jekyll-feed"
@@ -9,9 +9,9 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
 
   # Generate the site
-  sh "bundle exec jekyll build"
+  # sh "bundle exec jekyll build"
 
   # Run Algolia 
-  sh "bundle exec jekyll algolia"
+  # sh "bundle exec jekyll algolia"
   
 end
