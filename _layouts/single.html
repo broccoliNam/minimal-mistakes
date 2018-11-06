@@ -34,9 +34,6 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-          <div class="adsense">
-            {% include advertisements-in-article.html %}
-          </div>
         {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc">
@@ -47,6 +44,9 @@ layout: default
         {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        <div class="adsense">
+            {% include advertisements-in-article.html %}
+          </div>
       </section>
 
       <footer class="page__meta">
