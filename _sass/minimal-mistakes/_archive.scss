@@ -54,6 +54,8 @@
   margin-top: 0;
   font-size: $type-size-6;
 
+  word-break: break-word;
+
   & + p {
     text-indent: 0;
   }

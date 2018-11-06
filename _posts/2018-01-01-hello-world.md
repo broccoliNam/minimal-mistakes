@@ -1,5 +1,4 @@
 ---
-
 title: "minimal mistakes 테마를 이용해 github.io 블로그 구축하기"
 categories:
     - Info
@@ -12,11 +11,13 @@ tags:
 --- 
 
 ## Intro
-서론에 들어가서, 이야기 하자면.. ddddddddddddddddddddddddddddddddddddddddddddddddddddd 
+서론에 들어가서, 이야기 하자면.. ddddd
 아메리 ㅇㅇㅇ
 아메리 zaa
-ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
-
+ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+ddddddddddddddddddddddddfassssssssssssssssssssdfassssssssssssssssssssㄴㄴㄴㄴㄴㄴㄴㄴ
+EEEEECCLIPSEEEEEECCLIPSEEEEEECCLIPSEEEEEECCLIPSEEEEEECCLIPSEEEEEECCLIPSEdddddddddddddddddddddddddddddddddddddddddddd
+ㅇ
 ## Body
 본론에 들어가서, 이야기 하자면..
 
