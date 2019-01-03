@@ -14,7 +14,7 @@ tags:
 
 회사에서 RDS 서비스를 애용하고 있던 중에, 작년 12월 23일경에 AWS팀으로부터 메일을 하나 받았습니다. 혹시나 운영하고 있는 리소스들이 문제가 생겼나 싶어서 급하게 확인을 했는데요. 지금 당장 생긴 문제는 아니였지만 확인을 안 했다면 꽤나 큰 문제가 있었을텐데, 다행히도 미리 발견했습니다.
 
-## **Automatic Minor Version Upgrade(AMNU)란?**
+## Automatic Minor Version Upgrade(AMNU)란?
 말 그대로, 마이너 버전을 자동으로 업그레이드 시켜주는 일종의 AWS RDS의 기능입니다. 물론, 업그레이드를 할 때는 다운타임이 발생하게 됩니다.
 
 ## 문제의 시작
@@ -23,7 +23,7 @@ tags:
 >> You are receiving this email because you have had one or more active Amazon RDS database instances with the AMVU property set to TRUE. <br/>
 >> **If you do not want your database instance to be automatically upgraded to the default engine minor version, you can modify the database instance and set this property to FALSE.**
 
-다음은 메일 제목과 내용의 일부입니다. 해석해보면, 하나 이상의 RDS 인스턴스의 AMVU속성이 True로 설정 되어 있다는 내용입니다. 그러니까 이에 따른 적절한 조치를 미리 취해달라는 내용인데요. 큰 문제가 생겼습니다. 왜냐하면 지금 제가 회사에서 서비스 중인 모든 RDS 인스턴스는 무중단 서비스이기 때문에 다운타임이 전혀 없어야 하기 때문입니다.
+다음은 메일 제목과 내용의 일부입니다. 해석해보면, **하나 이상의 RDS 인스턴스의 AMVU속성이 True로 설정 되어 있다는 내용입니다. 그러니까 이에 따른 적절한 조치를 미리 취해달라는 내용인데요.** 큰 문제가 생겼습니다. 왜냐하면 지금 제가 회사에서 서비스 중인 모든 RDS 인스턴스는 무중단 서비스이기 때문에 다운타임이 전혀 없어야 하기 때문입니다.
 
 
 ## 해결
@@ -134,11 +134,7 @@ aws rds modify-db-instance \
 ```
 > "AutoMinorVersionUpgrade": false,
 
-## 의문
-'내가 언제 AMVU를 설정했을까?' 라는 의문이 들었습니다. 그래서 AWS 콘솔을 통해 테스트로 새로운 RDS 인스턴스를 생성하던 도중에 '유지 관리 -> 자동 마이너 버전 업그레이드' 항목이 있었고, 업그레이드를 사용한다에 체크가 되어 있더군요. 제가 그냥 지나쳤던 단순한 일이 하마터면, 정말 큰 문제가 될 뻔 했습니다.
-![사진2](https://blogfiles.pstatic.net/MjAxOTAxMDNfMTU0/MDAxNTQ2NTA3ODIzMTE0.C4MOvrZBjYP_XZ-B9ay5t-tT_O6hacwbxfqIRolCWBsg.9Wq0JbTfOAvf1vtORs33QFueYgH6Yo11MqExUrShitgg.PNG.broccoli98/1.PNG?type=w1)
-
-## **마무리**
+## 마무리
 Slack의 AWS 커뮤니티에서 활동 중에 이와 같은 내용으로 질문을 했던 사람이 있었는데 질문에 대한 답변 중에 이런 내용이 있었습니다.
 > RDS를 원하는 시기에 원하는 방식으로 업그레이드하기 위하여 Auto minor upgrade 기능을 Off해서 사용하는 케이스가 흔한데, 점진적으로 이런 아키텍처/문화에서 탈피할 수 있으면 좋겠네요. - hanjin
 
