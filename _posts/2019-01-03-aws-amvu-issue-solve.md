@@ -18,7 +18,7 @@ tags:
 말 그대로, 마이너 버전을 자동으로 업그레이드 해주는 일종의 AWS RDS의 기능입니다. 물론, 업그레이드를 할 때는 다운타임이 발생하게 됩니다.
 
 ## 문제의 시작
-![사진1](https://blogfiles.pstatic.net/MjAxOTAxMDNfMTcw/MDAxNTQ2NTA3NjUxMTI3.yeDd3PTYGfPKnUoScxPHvAp-v27-IVarqx7tk_RNyhkg.jboyTbH46kOTjz7odNqkaAhK3sIthLZAG1B-Tl5_rmQg.PNG.broccoli98/1_1.PNG?type=w1)
+![사진1](https://user-images.githubusercontent.com/35317926/50671688-cc095780-1016-11e9-842a-8d45ebc665da.PNG)
 > **Changes to Amazon RDS Automatic Minor Version Upgrade Behavior [AWS Account: 000000000]**
 >> You are receiving this email because you have had one or more active Amazon RDS database instances with the AMVU property set to TRUE. <br/>
 >> **If you do not want your database instance to be automatically upgraded to the default engine minor version, you can modify the database instance and set this property to FALSE.**
