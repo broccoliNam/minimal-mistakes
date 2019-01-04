@@ -151,7 +151,7 @@ aws rds describe-db-instances \
 query 옵션의 내용은 다음과 같습니다.
 > 모든 DB 인스턴스를 조회하는데, DBInstanceIdentifier 항목의 데이터는 Name이라는 항목으로, AutoMinorVersionUpgrade 항목의 데이터는 AMVU이라는 항목으로 보여줘
 
-### Output
+**Output**
 ```json
 [
     {
