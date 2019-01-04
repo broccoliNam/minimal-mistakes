@@ -34,7 +34,7 @@ aws rds describe-db-instances \
 --db-instance-identifier [RDS 인스턴스명]
 ```
 
-### Output
+**Output**
 ```json
 {
     "DBInstances": [
@@ -89,7 +89,7 @@ aws rds modify-db-instance \
 --no-auto-minor-version-upgrade
 ```
 
-### Output
+**Output**
 ```json
 {
     "DBInstances": [
