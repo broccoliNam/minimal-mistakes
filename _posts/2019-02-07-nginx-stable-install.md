@@ -135,7 +135,6 @@ failure: repodata/repomd.xml from nginx-stable: [Errno 256] No more mirrors to t
 http://nginx.org/packages/centos/7Server/x86_64/repodata/repomd.xml: [Errno 14] HTTP Error 404 - Not Found
 ```
 저장소에 등록 내용중 baseurl에서 $releasever 값이 잘못된 경우입니다. 이 경우에 자신의 운영체제 버전을 확인해서 넣어줍시다.
-
 **Example**
 ```
 http://nginx.org/packages/centos/7/$basearch/
