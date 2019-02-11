@@ -54,7 +54,6 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ```
 sudo yum-config-manager --enable nginx-mainline
 ```
-enabled 값을 활성화시켜줌으로써, NGINX 설치 시에 버전의 기본 값을 변경합니다.
 
 yum 저장소 갱신:
 ```
