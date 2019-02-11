@@ -15,11 +15,11 @@ tags:
 
 ## NGINX의 버전 관리
 ![사진1](https://www.nginx.com/wp-content/uploads/2014/04/branch-1024x395.png)
-일반적으로, 많이 알려진 버전은 단 두 가지인데요. Mainline 버전과 Stable 버전이 있습니다. 새로운 특징, 기능, 버그패치 등은 Mainline 버전에서 작업하고 그 이후에, 새로운 기능이 추가되지 않고 버그패치만 하는게 Stable 버전입니다. 버전 선택에 관련해서 NGINX의 공식 입장은 다음과 같습니다.
+일반적으로, 많이 알려진 버전은 단 두 가지인데요. Mainline 버전과 Stable 버전이 있습니다. 새로운 특징, 기능, 버그 패치 등은 Mainline 버전에서 작업하고 그 이후에, 새로운 기능이 추가되지 않고 버그 패치만 하는 게 Stable 버전입니다. 버전 선택에 관련해서 NGINX의 공식 입장은 다음과 같습니다.
 
 > We recommend that in general you deploy the NGINX mainline branch at all times. The main reason to use the stable branch is that you are concerned about possible impacts of new features, such as incompatibility with third-party modules or the inadvertent introduction of bugs in new features.
 
-기본적으로 Mainline 버전을 택하고 지속적으로 업데이트 하기를 권장하지만 Stable 버전은 서드파티 모듈과의 호환성 문제 또는 새로운 기능이 도입됨에따라, 생길 수 있는 문제 때문에 지속적으로 업데이트 하지 못할 때 사용되어 진다고 나와 있습니다.
+기본적으로 Mainline 버전을 택하고 지속적으로 업데이트 하기를 권장하지만 Stable 버전은 서드파티 모듈과의 호환성 문제 또는 새로운 기능이 도입됨에 따라, 생길 수 있는 문제 때문에 지속적으로 업데이트하지 못할 때 사용된다고 나와 있습니다.
 
 따라서, 버전을 선택할 때 환경을 고려하여 신중하게 선택하는 것이 중요할 것 같습니다.
 
@@ -54,7 +54,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ```
 sudo yum-config-manager --enable nginx-mainline
 ```
-enabled 값을 활성화 시켜줌으로써, NGINX 설치 시에 버전의 기본 값을 변경합니다.
+enabled 값을 활성화시켜줌으로써, NGINX 설치 시에 버전의 기본 값을 변경합니다.
 
 yum 저장소 갱신:
 ```
@@ -129,12 +129,12 @@ nginx version: nginx/1.14.2
 
 ## 에러
 ### RHEL/CentOS 계열
-1. yum 저장소에 NGINX 저장소를 등록하고, yum 관련 명령어 실행 시에 다음과 같은 에러 발생 시 해결방법
+1. yum 저장소에 NGINX 저장소를 등록하고, yum 관련 명령어 실행 시에 다음과 같은 에러 발생
 ```
 failure: repodata/repomd.xml from nginx-stable: [Errno 256] No more mirrors to try.
 http://nginx.org/packages/centos/7Server/x86_64/repodata/repomd.xml: [Errno 14] HTTP Error 404 - Not Found
 ```
-저장소에 등록 내용중 baseurl에서 $releasever 값이 잘못된 경우입니다. 이 경우에 자신의 운영체제 버전을 확인해서 넣어줍시다. <br/>
+저장소에 등록 내용 중 baseurl에서 $releasever 값이 잘못된 경우입니다. 이 경우에 자신의 운영체제 버전을 확인해서 넣어줍시다. <br/><br/>
 **Example**
 ```
 http://nginx.org/packages/centos/7/$basearch/
