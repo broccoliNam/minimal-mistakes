@@ -4,7 +4,6 @@ categories:
     - Server
 last_modified_at: 2019-02-07T11:00:00+09:00
 excerpt: "NGINX 최신 버전 설치하기"
-toc: true
 author_profile: true
 read_time: true
 tags:
@@ -25,12 +24,12 @@ tags:
 
 ## 설치
 ### RHEL/CentOS 계열
-의존성 설치: 
+**의존성 설치:**
 ```
 sudo yum install yum-utils
 ```
 
-yum 저장소에 nginx 저장소를 추가:
+**yum 저장소에 nginx 저장소를 추가:**
 ```
 sudo vi /etc/yum.repos.d/nginx.repo
 ```
@@ -50,22 +49,22 @@ enabled=0
 gpgkey=https://nginx.org/keys/nginx_signing.key
 ```
 
-(Optinal)mainline 버전을 설치하려면 다음 명령어를 수행:
+**(Optinal)mainline 버전을 설치하려면 다음 명령어를 수행:**
 ```
 sudo yum-config-manager --enable nginx-mainline
 ```
 
-yum 저장소 갱신:
+**yum 저장소 갱신:**
 ```
 sudo yum update
 ```
 
-NGINX 설치:
+**NGINX 설치:**
 ```
 sudo yum install -y nginx
 ```
 
-NGINX 버전 확인:
+**NGINX 버전 확인:**
 ```
 nginx -v
 ```
@@ -75,12 +74,12 @@ nginx version: nginx/1.14.2
 ```
 
 ### Debian/Ubuntu 계열
-의존성 설치: 
+**의존성 설치:**
 ```
 sudo apt install curl gnupg2 ca-certificates lsb-release
 ```
 
-apt 저장소에 원하는 버전의 nginx 저장소 추가:
+**apt 저장소에 원하는 버전의 nginx 저장소 추가:**
 ```
 # Debian 계열
 echo "deb http://nginx.org/packages/debian `lsb_release -cs` nginx" \
@@ -97,27 +96,27 @@ echo "deb http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list
 ```
 
-패키지 신뢰성 확인:
+**패키지 신뢰성 확인:**
 ```
 curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 ```
 
-키 신뢰성 확인:
+**키 신뢰성 확인:**
 ```
 sudo apt-key fingerprint ABF5BD827BD9BF62
 ```
 
-apt 저장소 갱신:
+**apt 저장소 갱신:**
 ```
 sudo apt update
 ```
 
-NGINX 설치:
+**NGINX 설치:**
 ```
 sudo apt-get install nginx
 ```
 
-NGINX 버전 확인:
+**NGINX 버전 확인:**
 ```
 nginx -v
 ```
@@ -128,7 +127,7 @@ nginx version: nginx/1.14.2
 
 ## 에러
 ### RHEL/CentOS 계열
-1. yum 저장소에 NGINX 저장소를 등록하고, yum 관련 명령어 실행 시에 다음과 같은 에러 발생
+**1. yum 저장소에 NGINX 저장소를 등록하고, yum 관련 명령어 실행 시에 다음과 같은 에러 발생**
 ```
 failure: repodata/repomd.xml from nginx-stable: [Errno 256] No more mirrors to try.
 http://nginx.org/packages/centos/7Server/x86_64/repodata/repomd.xml: [Errno 14] HTTP Error 404 - Not Found

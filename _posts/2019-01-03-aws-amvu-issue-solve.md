@@ -4,7 +4,6 @@ categories:
     - AWS
 last_modified_at: 2019-01-03T18:26:00+09:00
 excerpt: "AWS RDS AMVU 이슈 해결하기"
-toc: true
 author_profile: true
 read_time: true
 tags:
