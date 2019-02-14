@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Andrew Nam"
   avatar           : /assets/images/avatar4.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  # bio              : "I`m blockchain developer"
+  bio              : "I`m blockchain developer"
   # location         : "Somewhere, Republic of Korea"
   email            :
   links:
