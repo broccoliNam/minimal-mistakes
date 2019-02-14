@@ -71,12 +71,12 @@ nginx -v
 ```
 nginx version: nginx/1.14.2
 ```
-
+<br>
 ### Debian/Ubuntu 계열
 **의존성 설치:**
 ```
 sudo apt install curl gnupg2 ca-certificates lsb-release
-```
+```  
 
 **apt 저장소에 원하는 버전의 nginx 저장소 추가:**
 ```
