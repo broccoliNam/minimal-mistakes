@@ -12,7 +12,7 @@ tags:
 아무런 조치 없이 리눅스의 패키지 관리자를 통해서 웹 서버인 NGINX를 설치하게 되면 자신이 원하는 버전을 설치하지 못할뿐더러, 현재 패키지 관리자에선 구 버전이 기본 설정되어 있습니다. 실제 운영환경에서 구 버전은 보안 문제든 기능 문제든 치명적으로 작용할 수 있습니다. 패키지 관리자를 업데이트해서 NGINX 최신 버전 및 원하는 버전을 설치해보도록 하겠습니다.
 
 ## NGINX의 버전 관리
-![사진1](https://www.nginx.com/wp-content/uploads/2014/04/branch-1024x395.png)
+![사진1](https://user-images.githubusercontent.com/35317926/52773712-f3742b00-307e-11e9-99dd-21587b61163b.png)
 일반적으로, 많이 알려진 버전은 단 두 가지인데요. Mainline 버전과 Stable 버전이 있습니다. 새로운 특징, 기능, 버그 패치 등은 Mainline 버전에서 작업하고 그 이후에, 새로운 기능이 추가되지 않고 버그 패치만 하는 게 Stable 버전입니다. 버전 선택에 관련해서 NGINX의 공식 입장은 다음과 같습니다.
 
 > We recommend that in general you deploy the NGINX mainline branch at all times. The main reason to use the stable branch is that you are concerned about possible impacts of new features, such as incompatibility with third-party modules or the inadvertent introduction of bugs in new features.
