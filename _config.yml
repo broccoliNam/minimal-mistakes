@@ -15,7 +15,7 @@ remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 title                    : "goodlife-coding"
 title_separator          : "-"
 name                     : "goodlife-coding"
@@ -24,7 +24,7 @@ url                      : "https://iffybot.github.io"# the base hostname & prot
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : "iffybot/iffybot.github.io"# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : staticman # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
@@ -102,9 +102,9 @@ analytics:
 # Site Author
 author:
   name             : "Andrew Nam"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I`m blockchain developer"
-  location         : "Somewhere, Republic of Korea"
+  avatar           : /assets/images/avatar4.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  # bio              : "I`m blockchain developer"
+  # location         : "Somewhere, Republic of Korea"
   email            :
   links:
     - label: "Email"
