@@ -76,6 +76,7 @@ mv archive.tgz $DST/$TODAY
 를 각각 변수에 지정을 해주고, 날짜 별로 관리를 하기 위해 `$DST/$TODAY` 디렉터리를 생성합니다. 그리고 해당 경로로 이동해서 `backup_pg` 함수를 호출하게 됩니다. 함수 안에서는 `pg_start_backup('{LABEL}')` 명령어를 이용해서 백업을 진행합니다. 그리고 백업된 파일 `$SRC`를 `$ARCHIVE` 이름으로 압축하고 `pg_stop_backup()` 명령어를 이용해서 백업을 완료합니다. 완료하게 되면 실제로 Postgresql의 데이터 디렉터리가 압축된 파일(data.tgz)이 생성이 됩니다. 마지막으로 해당 백업 시점의 WAL 파일의 보관을 위해 `$ARC` 경로로 이동하여 WAL 파일을 압축하게 되고 백업 후 데이터 디렉터리가 압축되어 있던 경로인 `$DST/$TODAY`에 옮겨 담게 됩니다.
 
 ***스케줄링***
+
 백업은 매번 수동으로 진행하게 되면 번거로워질 수 있습니다. 따라서 크론 작업에 다음과 같이 등록하도록 합니다. 물론 해당 내용도 원하는 시간에 맞춰서 변경해주시면 됩니다. 저는 매주 월요일 새벽 5시에 백업을 진행하는 크론 작업을 등록하도록 하겠습니다.
 ```
 0 5 * * 1 su postgres -c '{BACKUP_SCRIPT_PATH}/backup.sh'
@@ -84,6 +85,7 @@ mv archive.tgz $DST/$TODAY
 
 ### 복구
 복구는 Postgresql 서버를 중지시켜주고, 데이터 디렉터리를 삭제해주도록 합니다. 그리고 위에서 `$DST/%TODAY`에 백업해두었던 데이터 디렉터리가 압축되어 담긴 `data.tgz` 파일의 압축을 해제하고 기존의 데이터 디렉터리 위치에 옮겨줍니다.
+
 ***recovery.conf***
 ```
 restore_command 'cp {CLUSTER_DISK_PATH}/archive/%f %p'
