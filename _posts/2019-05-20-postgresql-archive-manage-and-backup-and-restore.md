@@ -66,7 +66,7 @@ cd $DST/$TODAY
 backup_pg $ARCHIVE
 
 cd $ARC
-tar czpf archive.tgz ./
+tar czpf archive.tgz $ARC
 mv archive.tgz $DST/$TODAY
 ```
 - $SRC : Postgresql Data 디렉터리 
