@@ -95,6 +95,7 @@ archive_cleanup_command '/usr/pgsql-11/bin/pg_archivecleanup {CLUSTER_DISK_PATH}
 
 ### 결과
 WAL 파일을 저장해두었던 클러스터 디스크에는 WAL 파일이 삭제되고, 데이터 디렉터리를 확인해보면 `recovery.conf`가 `recovery.done`으로 변경되게 됩니다. 그리고 `backup_label.old`라는 파일이 새로 생성되는데 해당 파일은 복원에 대한 로그입니다.
+
 ***backup_label.old***
 ```
 START WAL LOCATION: 0/44000028 (file 000000060000000000000044)
